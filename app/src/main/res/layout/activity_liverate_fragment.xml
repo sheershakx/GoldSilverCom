@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".liverate_fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_livefragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/toolbar_menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:shadowColor="#bf9b30"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="3"
+            android:text="पूर्वाञ्चल सुन-चाँदी व्यवसायी संघ"
+            android:textColor="#A07905"
+            android:textSize="24sp"
+            android:textStyle="bold"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="@color/gold">
+
+        <TextView
+            android:id="@+id/marqueetextview"
+            style="@style/CardView.Dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="                 यहाँहरुलाई पूर्वाञ्चल सुन-चाँदी व्यवसायीसंघको मोबाइल एपमा स्वागत छ "
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/dateview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:text="आजको मिति :"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/currdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/dateview"
+
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/previouspricebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:background="@color/colorAccent"
+            android:text="बिगतका\nमूल्यहरू"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6.5"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:id="@+id/atablelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:stretchColumns="2">
+
+            <TableRow android:background="@color/colorAccent">
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="0"
+                    android:text="धातु"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+
+                    android:layout_weight="0"
+
+                    android:text="Bid"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+
+                    android:layout_weight="0"
+
+                    android:text="Ask"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="74dp"
+                    android:layout_height="44dp"
+                    android:layout_column="0"
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:text="सुन(छापावाल)"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/aorderno"
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="74dp"
+                    android:layout_height="44dp"
+                    android:layout_column="0"
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:text="सुन(तेजाबी)"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="74dp"
+                    android:layout_height="44dp"
+                    android:layout_column="0"
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:text="चाँदी"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:stretchColumns="1">
+
+            <TableRow android:background="@color/colorAccent">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+
+                    android:layout_weight="0"
+                    android:text="खुद्रा "
+                    android:textAlignment="textEnd"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+
+                    android:layout_weight="0"
+                    android:text=" मूल्य"
+                    android:textAlignment="viewStart"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="191dp"
+                    android:layout_height="44dp"
+                    android:layout_column="0"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:text="सुन(छापावाल)"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/finegold_view"
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="185dp"
+                    android:layout_height="36dp"
+                    android:layout_column="0"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:text="सुन(तेजाबी)"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tejgold_view"
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="74dp"
+                    android:layout_height="44dp"
+                    android:layout_column="0"
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:text="चाँदी"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/silver_view"
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/aboutus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+
+
+            android:src="@drawable/aboutus_art" />
+
+        <!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+        <!--            android:id="@+id/callbutton"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentRight="true"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:backgroundTint="#8080"-->
+        <!--            android:src="@drawable/callimg" />-->
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

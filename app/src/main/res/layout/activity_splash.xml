@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffcf40"
+    tools:context=".splash">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="95dp"
+        android:fontFamily="@font/simonetta"
+        android:text="पूर्वाञ्चल सुन-चाँदी व्यवसायी संघ"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ImageView
+
+        android:layout_width="324dp"
+        android:layout_height="340dp"
+        android:layout_centerInParent="true"
+
+        android:src="@drawable/nepalflag" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/simonetta"
+        android:text="Powered by Acosaf Technology Pvt. Ltd"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAccent"
+    tools:context=".aboutUs">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="कार्य समिति पदाधिकारीहरु"
+                    android:textColor="#A07905"
+                    android:textStyle="bold" android:fontFamily="@font/simonetta"
+                   android:textSize="22sp" android:textAlignment="center"/>
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical"
+                    android:stretchColumns="1">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+                            android:text="अध्यक्ष"
+                            android:textColor="#A07905"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="टिकाराम लामगादे\n९८५२०४८१५१ "
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+                            android:text="उपध्यक्ष"
+                            android:textColor="#A07905"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/date_admindetail"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="कुमार श्रेष्ठ\n९८५२०५६१५५"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+                            android:text="सचिब"
+                            android:textColor="#A07905"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/itemtype_admindetail"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/simonetta"
+                            android:text="रोशन श्रेष्ठ \n९८५२०५५९८५"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+                            android:text="सह-सचिब"
+                            android:textColor="#A07905"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/serialno_admindetail"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="राज कुमार बिश्वकर्मा\n९८५२०८०८२२"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+                            android:text="कोषाध्यक्क्ष"
+                            android:textColor="#A07905"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/size_admindetail"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="किशोर भट्टराई \n९८४२०३५७९१"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+                            android:text="सदस्यहरु :"
+                            android:textColor="#A07905"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/model_admindetail"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="नारायण बाग्ले\n९८५२०५४५६४"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+
+                            android:textColor="@color/Purple"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="राकेश श्रेष्ठ\n९८५२०६३५५५"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+
+                            android:textColor="@color/Purple"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="हिरा कटुवाल\n९८००९९८१५४"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+
+                            android:textColor="@color/Purple"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="रोम कुमारी गहतराज\n९८४१८६१११६"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+
+                            android:textColor="@color/Purple"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/spec_admindetail"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="शान्ति गजमेर\n९८६२०५९१७२"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+
+                            android:textColor="@color/Purple"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/clientproblem_admindetail"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="रमेश बराइली\n९८४२४६२१४६"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+
+                            android:textColor="@color/Purple"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/cost_admindetail"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="अमर बराइली\n९८४२६२२६३७"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+
+                            android:textColor="@color/Purple"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/status_admindetail"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="ध्हन ब. शंकर\n९८४२०९७५९२"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_column="0"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/simonetta"
+                            android:text="सल्लाहकारहरु :"
+                            android:textColor="#A07905"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/simonetta"
+                            android:text="विश्वराज धिमाल\nराजेन्द्र कुमार श्रेष्ठ\nराजकुमार गजमेर\nराज माडी श्रेष्ठ"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

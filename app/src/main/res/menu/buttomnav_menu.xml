@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_rate"
+        android:icon="@drawable/liverateicon"
+        android:title="Live rate"
+        ></item>
+    <item
+        android:id="@+id/nac_memdetails"
+        android:icon="@drawable/placeorder"
+        android:title="Member Details"
+        ></item>
+    <item
+        android:id="@+id/nav_notice"
+        android:icon="@drawable/myorder"
+        android:title="Notice"
+        ></item>
+<!--    <item-->
+<!--        android:id="@+id/nav_about"-->
+<!--        android:icon="@drawable/androidicon"-->
+<!--        android:title="About us"-->
+<!--        ></item>-->
+</menu>

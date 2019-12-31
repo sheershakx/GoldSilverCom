@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".updateRate">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"></RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9.2"
+        android:orientation="vertical">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:stretchColumns="1">
+
+            <TableRow android:background="#000">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+
+                    android:layout_weight="0"
+                    android:text="आजको "
+                    android:textAlignment="textEnd"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+
+                    android:layout_weight="0"
+                    android:text="  मूल्य"
+                    android:textAlignment="viewStart"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="191dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:text="सुन(छापावाल)"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/update_finegold"
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:hint="छापावाल सुनको मूल्य हाल्नुहोस"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="185dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:text="सुन(तेजाबी)"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText android:inputType="number"
+                    android:id="@+id/update_tejgold"
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:hint="तेजाबी सुनको मूल्य हाल्नुहोस "
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="74dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:text="चाँदी"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText android:inputType="number"
+                    android:id="@+id/update_silver"
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:hint="चाँदीको मूल्य हाल्नुहोस"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/update_liverate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/loginbtn_design"
+            android:fontFamily="@font/simonetta"
+            android:text="Update"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+</LinearLayout>
