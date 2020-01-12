@@ -28,8 +28,8 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class memberdetails extends AppCompatActivity {
-    TextView firmname, address, proname, memid, pan;
-    ImageView call, sms;
+    TextView firmname, address, proname, memid, pan,txtview;
+    ImageView call, sms, addLebhi;
     ProgressDialog progressDialog;
     String Fname, Faddress, Fproname, Fmobile, Fpan, Fmemid;
     String id;
@@ -45,8 +45,18 @@ public class memberdetails extends AppCompatActivity {
         memid = findViewById(R.id.memid_d);
         pan = findViewById(R.id.pan_d);
 
+        txtview=findViewById(R.id.txtviewlebhi);
+        txtview.setVisibility(View.GONE);
+
         call = findViewById(R.id.callnow);
         sms = findViewById(R.id.sms);
+        addLebhi = findViewById(R.id.add_lebhi_icon);
+        addLebhi.setVisibility(View.GONE);
+
+        if (login.usertype.equals("1")) {
+            addLebhi.setVisibility(View.VISIBLE);
+            txtview.setVisibility(View.VISIBLE);
+        }
 
         call.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +75,15 @@ public class memberdetails extends AppCompatActivity {
             public void onClick(View v) {
                 String number = Fmobile;  // The number on which you want to send SMS
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null)));
+            }
+        });
+
+        addLebhi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(memberdetails.this, addMontlyLebhi.class);
+                intent.putExtra("pan", Fpan.trim());
+                memberdetails.this.startActivity(intent);
             }
         });
 

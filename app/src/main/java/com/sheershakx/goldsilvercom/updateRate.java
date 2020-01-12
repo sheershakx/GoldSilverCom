@@ -77,7 +77,7 @@ public class updateRate extends AppCompatActivity {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                 date = LocalDateTime.now();
             }
-            String Date = null;
+            String Date = "2222-22-22";
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                 Date = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH).format(date);
             }

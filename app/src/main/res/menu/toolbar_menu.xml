@@ -4,6 +4,12 @@
     <item
         android:id="@+id/update_rate"
        app:showAsAction="never"
-        android:title="Update Rate"
+        android:title="दर अपडेट"
         ></item>
+    <item
+        android:id="@+id/jyala_darti"
+        app:showAsAction="never"
+        android:title="संघले तोकेको ज्याला दर्तीको दर"
+        ></item>
+
 </menu>

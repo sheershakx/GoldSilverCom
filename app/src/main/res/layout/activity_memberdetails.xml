@@ -205,6 +205,26 @@
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/smsicon2" />
 
+            <ImageView
+                android:id="@+id/add_lebhi_icon"
+                android:layout_marginStart="20dp"
+                android:layout_below="@id/callnow"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:tint="#000"
+                android:src="@drawable/add_icon"/>
+            <TextView
+                android:id="@+id/txtviewlebhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="लेभी भर्नुहोस्"
+                android:textStyle="bold"
+                android:layout_below="@id/callnow"
+                android:layout_toRightOf="@id/add_lebhi_icon"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="5dp"
+                android:textSize="20sp"/>
+
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>

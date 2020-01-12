@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gold"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/tbllayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:stretchColumns="2">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/sn_darti"
+                        android:layout_width="84dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_weight="0"
+                        android:hint="1"
+                        android:textAlignment="center"
+
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/name_darti"
+                        android:layout_width="195dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+
+                        android:layout_weight="0"
+
+                        android:hint="चाँदी पालिस गरेको"
+                        android:textAlignment="center"
+
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/rate_darti"
+                        android:layout_width="93dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="2"
+
+                        android:layout_weight="0"
+
+                        android:text="दर"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+
+
+                </TableRow>
+
+
+            </TableLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -59,13 +58,10 @@ public class liverate_fragment extends Fragment {
         new getRate().execute();
         marqueetext = view.findViewById(R.id.marqueetextview);
         Toolbar toolbar = view.findViewById(R.id.toolbar_livefragment);
-           toolbar.setVisibility(View.GONE);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
         ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
         setHasOptionsMenu(true);
-        if (login.usertype != null && login.usertype.equals("1")) {
-            toolbar.setVisibility(View.VISIBLE);
-        }
+
         marqueetext.setSelected(true);
 
         currDate = view.findViewById(R.id.currdate);
@@ -77,7 +73,9 @@ public class liverate_fragment extends Fragment {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             Date = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH).format(date);
         }
-        currDate.setText(Date);
+        if (Date != null) {
+            currDate.setText(Date);
+        }
         aboutus = view.findViewById(R.id.aboutus);
         aboutus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +91,11 @@ public class liverate_fragment extends Fragment {
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         MenuInflater inflatera = ((AppCompatActivity) getActivity()).getMenuInflater();
-        inflatera.inflate(R.menu.toolbar_menu, menu);
+        if (login.usertype!=null && login.usertype.equals("1")) {
+            inflatera.inflate(R.menu.toolbar_menu, menu);
+        } else {
+            inflatera.inflate(R.menu.toolbar_usermenu, menu);
+        }
         return;
 
 
@@ -102,15 +104,41 @@ public class liverate_fragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.update_rate:
-                 startActivity(new Intent(getContext(), updateRate.class));
+        if (login.usertype!=null && login.usertype.equals("1")) {
+            switch (item.getItemId()) {
+                case R.id.update_rate:
+                    startActivity(new Intent(getContext(), updateRate.class));
 
-                return true;
+                    return true;
+                case R.id.jyala_darti:
+                    startActivity(new Intent(getContext(), dartiRate.class));
 
-            default:
-                return super.onOptionsItemSelected(item);
+                    return true;
+
+                default:
+                    return super.onOptionsItemSelected(item);
+            }
         }
+
+        if (login.usertype!=null && login.usertype.equals("0")) {
+            switch (item.getItemId()) {
+                case R.id.lebhi_status:
+                    startActivity(new Intent(getContext(), monthlyLebhi.class));
+
+                    return true;
+
+                default:
+                    return super.onOptionsItemSelected(item);
+            }
+        }
+
+
+
+
+
+
+
+        return true;
     }
 
     public class getRate extends AsyncTask<String, String, String> {
@@ -130,7 +158,7 @@ public class liverate_fragment extends Fragment {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                 date = LocalDateTime.now();
             }
-            String Date = null;
+            String Date = "2222-22-22";
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
                 Date = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH).format(date);
             }

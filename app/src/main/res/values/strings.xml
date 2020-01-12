@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">Purwanchal Gold-Silver Association</string>
+
+<string-array name="year">
+    <item>२०७६</item>
+    <item>२०७७</item>
+
+</string-array>
+
+
+    <string-array name="month">
+
+        <item>बैशाख</item>
+        <item>जेठ</item>
+        <item>असार</item>
+        <item>साउन</item>
+        <item>भदौ</item>
+        <item>असोज</item>
+        <item>कार्तिक</item>
+        <item>मङ्सिर</item>
+        <item>पुष</item>
+        <item>माघ</item>
+        <item>फागुन</item>
+        <item>चैत</item>
+
+    </string-array>
+
+
+
 </resources>
+
