@@ -18,6 +18,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -37,14 +41,18 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class liverate_fragment extends Fragment {
     TextView marqueetext;
     TextView currDate;
     String finegold, tejgold, silver;
     TextView fineview, tejview, silview;
-
+    TextView finefene, tejabifene, silverfene;
+    String pagecontent;
     //  FloatingActionButton floatingActionButton;
     ImageView aboutus;
 
@@ -55,7 +63,14 @@ public class liverate_fragment extends Fragment {
         fineview = view.findViewById(R.id.finegold_view);
         tejview = view.findViewById(R.id.tejgold_view);
         silview = view.findViewById(R.id.silver_view);
+
+        finefene = view.findViewById(R.id.finegold_fene);
+        tejabifene = view.findViewById(R.id.tejabligold_fene);
+        silverfene = view.findViewById(R.id.silver_fene);
+
+
         new getRate().execute();
+        new getcontent().execute();
         marqueetext = view.findViewById(R.id.marqueetextview);
         Toolbar toolbar = view.findViewById(R.id.toolbar_livefragment);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
@@ -65,17 +80,10 @@ public class liverate_fragment extends Fragment {
         marqueetext.setSelected(true);
 
         currDate = view.findViewById(R.id.currdate);
-        LocalDateTime date = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            date = LocalDateTime.now();
-        }
-        String Date = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            Date = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH).format(date);
-        }
-        if (Date != null) {
-            currDate.setText(Date);
-        }
+
+
+            currDate.setText(login.nepalidate);
+
         aboutus = view.findViewById(R.id.aboutus);
         aboutus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,6 +123,15 @@ public class liverate_fragment extends Fragment {
 
                     return true;
 
+                case R.id.lebhi_report:
+                    startActivity(new Intent(getContext(), monthlyLebhi.class));
+
+                    return true;
+                case R.id.webview:
+                    startActivity(new Intent(getContext(), appliationForm.class));
+
+                    return true;
+
                 default:
                     return super.onOptionsItemSelected(item);
             }
@@ -124,6 +141,11 @@ public class liverate_fragment extends Fragment {
             switch (item.getItemId()) {
                 case R.id.lebhi_status:
                     startActivity(new Intent(getContext(), monthlyLebhi.class));
+
+                    return true;
+
+                case R.id.webview1:
+                    startActivity(new Intent(getContext(),appliationForm.class));
 
                     return true;
 
@@ -154,14 +176,8 @@ public class liverate_fragment extends Fragment {
 
         @Override
         protected String doInBackground(String... args) {
-            LocalDateTime date = null;
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                date = LocalDateTime.now();
-            }
-            String Date = "2222-22-22";
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                Date = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH).format(date);
-            }
+            String Date = (String) android.text.format.DateFormat.
+                    format("yyyy-MM-dd",Calendar.getInstance().getTime());
 
             try {
                 URL url = new URL(db_url);
@@ -239,4 +255,59 @@ public class liverate_fragment extends Fragment {
 
         }
     }
+    public class getcontent extends AsyncTask<String, String, String> {
+
+        @Override
+        protected String doInBackground(String... strings) {
+
+            DefaultHttpClient httpClient = new DefaultHttpClient();
+            HttpGet httpGet = new HttpGet("http://fenegosida.org/");
+            ResponseHandler<String> resHandler = new BasicResponseHandler();
+            try {
+                pagecontent = httpClient.execute(httpGet, resHandler);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            if (pagecontent != null) {
+                //  textView.setText(pagecontent);
+                //for gold tola chapawal
+                String trimmed=pagecontent.replace("(","");
+                String trimmedagain=trimmed.replace(")","");
+                Pattern pattern = Pattern.compile("<p>FINE GOLD 9999<br><span>per 1 tola<br><br>Nrs</span> <b>(.*?)</b>/-</p>", Pattern.DOTALL);
+                Matcher matcher = pattern.matcher(trimmedagain);
+
+////////////////////////////////////// Tejabi gold tola//////////////////////////////////////////////////
+                Pattern pattern1 = Pattern.compile("<p>TEJABI GOLD<br><span>per 1 tola<br><br>Nrs</span> <b>(.*?)</b>/-</p>", Pattern.DOTALL);
+                Matcher matcher1 = pattern1.matcher(pagecontent);
+////////////////////////////////////Silver tola/////////////////////////////////////////////////
+                Pattern pattern2 = Pattern.compile("<p>SILVER<br><span>per 1 tola<br><br>Nrs</span> <b>(.*?)</b>/-</p>", Pattern.DOTALL);
+                Matcher matcher2 = pattern2.matcher(pagecontent);
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+
+                while (matcher.find()) {
+                    String newstring = matcher.group(1);
+                    if (newstring != null) finefene.setText(newstring);
+                }
+
+                while (matcher1.find()) {
+                    String newstring = matcher1.group(1);
+                    if (newstring != null) tejabifene.setText(newstring);
+                }
+
+                while (matcher2.find()) {
+                    String newstring = matcher2.group(1);
+                    if (newstring != null) silverfene.setText(newstring);
+                }
+            }
+        }
+    }
+
 }

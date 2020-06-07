@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="0.8">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar_livefragment"
@@ -40,7 +40,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.4"
         android:background="@color/gold">
 
         <TextView
@@ -63,7 +63,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="0.5">
 
         <TextView
             android:id="@+id/dateview"
@@ -86,38 +86,41 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/previouspricebtn"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="0dp"
-            android:background="@color/colorAccent"
-            android:text="बिगतका\nमूल्यहरू"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="6.5"
+        android:layout_weight="7.7"
         android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="अन्तरास्ट्रिय मूल्य"
+            android:textColor="@color/gold"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TableLayout
             android:id="@+id/atablelayout"
-            android:layout_width="match_parent"
+            android:layout_width="match_parent" android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:stretchColumns="2">
+            android:stretchColumns="3">
 
             <TableRow android:background="@color/colorAccent">
 
                 <TextView
-                    android:layout_width="140dp"
+                    android:layout_width="118dp"
                     android:layout_height="match_parent"
                     android:layout_column="0"
                     android:layout_weight="0"
@@ -129,7 +132,7 @@
 
                 <TextView
 
-                    android:layout_width="116dp"
+                    android:layout_width="101dp"
                     android:layout_height="match_parent"
                     android:layout_column="1"
 
@@ -143,7 +146,7 @@
 
                 <TextView
 
-                    android:layout_width="93dp"
+                    android:layout_width="83dp"
                     android:layout_height="match_parent"
                     android:layout_column="2"
 
@@ -155,6 +158,19 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
+                <TextView
+
+                    android:layout_width="65dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="3"
+
+                    android:layout_weight="0"
+
+                    android:text="+/-"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
             </TableRow>
 
@@ -174,7 +190,7 @@
 
                 <TextView
                     android:id="@+id/aorderno"
-                    android:layout_width="116dp"
+                    android:layout_width="101dp"
                     android:layout_height="match_parent"
                     android:layout_column="1"
 
@@ -200,6 +216,19 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
+                <TextView
+
+                    android:layout_width="82dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="3"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
             </TableRow>
 
@@ -219,7 +248,7 @@
 
                 <TextView
 
-                    android:layout_width="116dp"
+                    android:layout_width="81dp"
                     android:layout_height="match_parent"
                     android:layout_column="1"
 
@@ -245,7 +274,19 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
+                <TextView
 
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="3"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </TableRow>
 
             <TableRow>
@@ -264,7 +305,7 @@
 
                 <TextView
 
-                    android:layout_width="116dp"
+                    android:layout_width="101dp"
                     android:layout_height="match_parent"
                     android:layout_column="1"
 
@@ -290,15 +331,35 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
+                <TextView
 
+                    android:layout_width="93dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="3"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </TableRow>
         </TableLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="नेपाल सुन-चाँदी व्यवसायी संघ मूल्य "
+            android:textColor="@color/gold"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        <TableLayout
+        <TableLayout android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
             android:orientation="vertical"
             android:stretchColumns="1">
 
@@ -341,20 +402,20 @@
 
                     android:layout_weight="0"
                     android:background="@drawable/rowdesign"
-                    android:text="सुन(छापावाल)"
+                    android:text="सुन(छापावाल) प्रति तोला"
                     android:textAlignment="center"
                     android:textColor="#000"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/finegold_view"
+android:id="@+id/finegold_fene"
                     android:layout_width="116dp"
                     android:layout_height="match_parent"
                     android:layout_column="1"
                     android:layout_weight="0"
                     android:background="@drawable/rowdesign"
-
+android:hint="loading..."
                     android:textAlignment="center"
                     android:textColor="#000"
                     android:textSize="18sp"
@@ -372,19 +433,19 @@
 
                     android:layout_weight="0"
                     android:background="@drawable/rowdesign"
-                    android:text="सुन(तेजाबी)"
+                    android:text="सुन(तेजाबी) प्रति तोला"
                     android:textAlignment="center"
                     android:textColor="#000"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tejgold_view"
+android:id="@+id/tejabligold_fene"
                     android:layout_width="116dp"
                     android:layout_height="match_parent"
                     android:layout_column="1"
                     android:layout_weight="0"
-                    android:background="@drawable/rowdesign"
+                    android:hint="loading..."   android:background="@drawable/rowdesign"
                     android:textAlignment="center"
                     android:textColor="#000"
                     android:textSize="18sp"
@@ -401,7 +462,145 @@
                     android:layout_column="0"
                     android:layout_weight="0"
                     android:background="@drawable/rowdesign"
-                    android:text="चाँदी"
+                    android:text="चाँदी प्रति तोला"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+android:id="@+id/silver_fene"
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:hint="loading..."   android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorAccent"
+            android:text="पुर्वान्चल सुन-चाँदी व्यवसायी संघ मूल्य "
+            android:textColor="@color/gold"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TableLayout android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:stretchColumns="1">
+
+            <TableRow android:background="@color/colorAccent">
+
+                <TextView
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="0"
+
+                    android:layout_weight="0"
+                    android:text="खुद्रा "
+                    android:textAlignment="textEnd"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+
+                    android:layout_weight="0"
+                    android:text=" मूल्य"
+                    android:textAlignment="viewStart"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="191dp"
+                    android:layout_height="44dp"
+                    android:layout_column="0"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:text="सुन(छापावाल) प्रति तोला"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/finegold_view"
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:hint="loading..."
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="185dp"
+                    android:layout_height="36dp"
+                    android:layout_column="0"
+
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:text="सुन(तेजाबी) प्रति तोला"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tejgold_view"
+                    android:layout_width="116dp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_weight="0"
+                    android:hint="loading..."      android:background="@drawable/rowdesign"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="74dp"
+                    android:layout_height="44dp"
+                    android:layout_column="0"
+                    android:layout_weight="0"
+                    android:background="@drawable/rowdesign"
+                    android:text="चाँदी प्रति तोला"
                     android:textAlignment="center"
                     android:textColor="#000"
                     android:textSize="18sp"
@@ -412,7 +611,7 @@
                     android:layout_width="116dp"
                     android:layout_height="match_parent"
                     android:layout_column="1"
-
+                    android:hint="loading..."
                     android:layout_weight="0"
                     android:background="@drawable/rowdesign"
                     android:textAlignment="center"
@@ -423,13 +622,14 @@
 
             </TableRow>
         </TableLayout>
-
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="0.6">
 
         <ImageView
             android:id="@+id/aboutus"
@@ -451,6 +651,5 @@
 
 
     </RelativeLayout>
-
 
 </LinearLayout>

@@ -25,6 +25,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.Calendar;
 
 public class login extends AppCompatActivity {
     EditText mob, pass;
@@ -32,6 +33,10 @@ public class login extends AppCompatActivity {
     public static String mymobile;
     public static String usertype;
     public static String userid;
+    public static String pan;
+    public static String firmname;
+    public static String proname;
+    public static String nepalidate;
 
 
     @Override
@@ -44,6 +49,7 @@ public class login extends AppCompatActivity {
         pass = findViewById(R.id.password);
         login = findViewById(R.id.login);
 
+        getNepaliDate();
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +67,20 @@ public class login extends AppCompatActivity {
         });
 
 
+    }
+    private void getNepaliDate() {
+        String year = (String) android.text.format.DateFormat.
+                format("yyyy", Calendar.getInstance().getTime());
+
+        String month = (String) android.text.format.DateFormat.
+                format("MM", Calendar.getInstance().getTime());
+
+        String date = (String) android.text.format.DateFormat.
+                format("dd", Calendar.getInstance().getTime());
+
+        com.sheershakx.goldsilvercom.date datex=new date();                         //date converter calling
+        String[] recvdate=  datex.conversion(Integer.parseInt(year),Integer.parseInt(month),Integer.parseInt(date));
+        nepalidate=recvdate[0]+"-"+recvdate[1]+"-"+recvdate[2];
     }
 
 
@@ -119,6 +139,9 @@ public class login extends AppCompatActivity {
                 mymobile = jsonObject.getString("mymobile");
                 usertype = jsonObject.getString("usertype");
                 userid = jsonObject.getString("id");
+                pan = jsonObject.getString("pan");
+                firmname = jsonObject.getString("firmname");
+                proname = jsonObject.getString("proname");
 
 //
                 return data;

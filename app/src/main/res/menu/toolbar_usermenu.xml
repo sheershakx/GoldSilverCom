@@ -6,4 +6,10 @@
         app:showAsAction="never"
         android:title="लेभी भुक्तानी विवरण"
         ></item>
+    <item
+        android:id="@+id/webview1"
+        app:showAsAction="never"
+        android:title="Gold Application Form"
+        ></item>
+
 </menu>

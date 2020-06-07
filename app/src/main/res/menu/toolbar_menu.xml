@@ -11,5 +11,15 @@
         app:showAsAction="never"
         android:title="संघले तोकेको ज्याला दर्तीको दर"
         ></item>
+    <item
+        android:id="@+id/lebhi_report"
+        app:showAsAction="never"
+        android:title="लेभी विवरण"
+        ></item>
+    <item
+        android:id="@+id/webview"
+        app:showAsAction="never"
+        android:title="Gold Application Form"
+        ></item>
 
 </menu>

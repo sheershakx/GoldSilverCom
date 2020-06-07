@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/simonetta"
-            android:text="संघद्वारा तोकिएको दर्तीको दर "
+            android:text="संघद्वारा तोकिएको जर्तीको दर "
             android:textColor="#FFF"
             android:textSize="24sp"
             android:textStyle="bold" />

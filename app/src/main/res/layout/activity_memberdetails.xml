@@ -207,23 +207,107 @@
 
             <ImageView
                 android:id="@+id/add_lebhi_icon"
-                android:layout_marginStart="20dp"
-                android:layout_below="@id/callnow"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:tint="#000"
-                android:src="@drawable/add_icon"/>
+                android:layout_below="@id/callnow"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/add_icon"
+                android:tint="#000" />
+
             <TextView
                 android:id="@+id/txtviewlebhi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="लेभी भर्नुहोस्"
-                android:textStyle="bold"
                 android:layout_below="@id/callnow"
-                android:layout_toRightOf="@id/add_lebhi_icon"
-                android:layout_marginTop="8dp"
                 android:layout_marginStart="5dp"
-                android:textSize="20sp"/>
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/add_lebhi_icon"
+                android:text="लेभी भर्नुहोस्"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+
+                android:id="@+id/tbllayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_lebhi_icon"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:stretchColumns="4">
+
+                <TableRow android:background="@color/colorAccent">
+
+                    <TextView
+                        android:layout_width="62dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_weight="0"
+                        android:text="वर्ष"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="61dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_weight="0"
+                        android:text="महिना"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="82dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="2"
+                        android:layout_weight="0"
+                        android:text="मूल्य"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="88dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="3"
+                        android:layout_weight="0"
+                        android:text="मिति"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_column="4"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="0"
+                        android:text="रसिद नं"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </TableRow>
+
+
+            </TableLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_memdetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tbllayout4" />
 
         </RelativeLayout>
 

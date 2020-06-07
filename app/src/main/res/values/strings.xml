@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Purwanchal Gold-Silver Association</string>
 
-<string-array name="year">
-    <item>२०७६</item>
-    <item>२०७७</item>
+    <string-array name="year">
+        <item>२०७६</item>
+        <item>२०७७</item>
 
-</string-array>
+    </string-array>
 
 
     <string-array name="month">
@@ -24,7 +24,6 @@
         <item>चैत</item>
 
     </string-array>
-
 
 
 </resources>

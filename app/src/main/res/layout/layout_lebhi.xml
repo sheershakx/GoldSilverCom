@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearlayout_notice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gold"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     android:layout_margin="5dp"
+        android:backgroundTint="#FFFFFF"
+        app:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/tbllayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:stretchColumns="4">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/yearLebhi"
+                        android:layout_width="71dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_weight="0"
+                        android:text="वर्ष"
+                        android:textAlignment="center"
+
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/monthLebhi"
+                        android:layout_width="69dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+
+                        android:layout_weight="0"
+
+                        android:text="महिना"
+                        android:textAlignment="center"
+
+                        android:textSize="16sp"
+                      />
+
+                    <TextView
+                        android:id="@+id/amountLebhi"
+                        android:layout_width="93dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="2"
+
+                        android:layout_weight="0"
+
+                        android:text="मूल्य"
+                        android:textAlignment="center"
+
+                        android:textSize="16sp"
+                       />
+
+                    <TextView
+                        android:id="@+id/dateLebhi"
+                        android:layout_width="86dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="3"
+
+                        android:layout_weight="0"
+
+                        android:text="मिति"
+                        android:textAlignment="center"
+
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/rashidLebhi"
+                        android:layout_width="71dp"
+                        android:layout_height="match_parent"
+                        android:layout_column="4"
+                        android:layout_marginEnd="2dp"
+
+                        android:layout_weight="0"
+
+                        android:text="रसिद नं"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+
+                </TableRow>
+
+
+            </TableLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -24,6 +24,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Locale;
 
 public class updateRate extends AppCompatActivity {
@@ -73,14 +74,6 @@ public class updateRate extends AppCompatActivity {
             tejgold = params[1];
             silver = params[2];
 
-            LocalDateTime date = null;
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                date = LocalDateTime.now();
-            }
-            String Date = "2222-22-22";
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                Date = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH).format(date);
-            }
 
 
             try {
@@ -94,7 +87,7 @@ public class updateRate extends AppCompatActivity {
                 String data_string = URLEncoder.encode("finegold", "UTF-8") + "=" + URLEncoder.encode(finegold, "UTF-8") + "&" +
                         URLEncoder.encode("tejgold", "UTF-8") + "=" + URLEncoder.encode(tejgold, "UTF-8") + "&" +
                         URLEncoder.encode("silver", "UTF-8") + "=" + URLEncoder.encode(silver, "UTF-8") + "&" +
-                        URLEncoder.encode("date", "UTF-8") + "=" + URLEncoder.encode(Date, "UTF-8");
+                        URLEncoder.encode("date", "UTF-8") + "=" + URLEncoder.encode(login.nepalidate, "UTF-8");
                 bufferedWriter.write(data_string);
                 bufferedWriter.flush();
                 bufferedWriter.close();

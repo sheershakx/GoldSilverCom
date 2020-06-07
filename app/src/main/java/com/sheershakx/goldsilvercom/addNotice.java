@@ -24,20 +24,19 @@ import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
 public class addNotice extends AppCompatActivity {
     EditText noticeinput;
     Button savenotice;
-    String currDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_notice);
 
-        currDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
 
         noticeinput = findViewById(R.id.inputNotice);
         savenotice = findViewById(R.id.saveNotice);
@@ -68,15 +67,6 @@ public class addNotice extends AppCompatActivity {
         protected String doInBackground(String... params) {
             String notice;
             notice = params[0];
-            LocalDateTime date = null;
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                date = LocalDateTime.now();
-            }
-            String Date = "2222-22-22";
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                Date = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH).format(date);
-            }
-
 
             try {
                 URL url = new URL(db_url);
@@ -87,7 +77,7 @@ public class addNotice extends AppCompatActivity {
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
                 String data_string = URLEncoder.encode("notice", "UTF-8") + "=" + URLEncoder.encode(notice, "UTF-8") + "&" +
-                        URLEncoder.encode("date", "UTF-8") + "=" + URLEncoder.encode(Date, "UTF-8") + "&" +
+                        URLEncoder.encode("date", "UTF-8") + "=" + URLEncoder.encode(login.nepalidate, "UTF-8") + "&" +
                         URLEncoder.encode("uid", "UTF-8") + "=" + URLEncoder.encode(login.userid, "UTF-8");
                 bufferedWriter.write(data_string);
                 bufferedWriter.flush();
